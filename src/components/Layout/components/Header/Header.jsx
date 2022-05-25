@@ -1,7 +1,14 @@
-import './header.scss';
+import styles from './header.module.scss';
+import classNames from 'classnames/bind';
 
-const header = () => {
-    return <div>header</div>;
+const cx = classNames.bind(styles);
+
+const Header = () => {
+    return (
+        <header className={cx('wrapper')}>
+            <div className={cx('container')}></div>
+        </header>
+    );
 };
 
-export default header;
+export default Header;
