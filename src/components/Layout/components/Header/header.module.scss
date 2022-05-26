@@ -6,6 +6,70 @@
     justify-content: center;
 }
 .container {
+    display: flex;
     height: 100%;
     width: var(--default-layout-width);
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+}
+
+.searchContainer {
+    width: 361px;
+    height: 46px;
+    background: rgba(22, 24, 35, 0.06);
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    border: 1.5px solid transparent;
+
+    .searchInput {
+        margin: 10px 0px 10px 20px;
+        flex: 8;
+        padding: 5px;
+        border-radius: 30px 0px 0px 30px;
+        display: flex;
+        font-weight: 400;
+        font-size: 16px;
+        width: 100%;
+        background: transparent;
+        border: none;
+        border-right: 1px solid #ccc;
+        border-radius: 10px 0px 0px 10px;
+
+        &::-webkit-search-cancel-button {
+            cursor: pointer;
+            background: url(https://pro.fontawesome.com/releases/v5.10.0/svgs/solid/times-circle.svg) no-repeat 50% 50%;
+            // background-size: contain;
+            -webkit-appearance: none;
+            opacity: 0.5;
+            height: 16px;
+            width: 16px;
+            border-radius: 50%;
+        }
+    }
+
+    &:focus-within {
+        border-color: rgba(22, 24, 35, 0.2);
+    }
+
+    .btn-search {
+        padding: 5px;
+        display: flex;
+        align-items: center;
+        flex: 1;
+        width: 100%;
+        border: none;
+        height: 100%;
+        display: flex;
+        border-radius: 0px 30px 30px 0px;
+        cursor: pointer;
+
+        &:hover {
+            background: rgba(22, 24, 35, 0.03);
+        }
+    }
 }
